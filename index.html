@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bionicle Arena</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Bionicle Arena</h1>
+            <div class="version-info">v1.4.0</div>
+            <div class="game-info">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="health">Health: <span id="health">150</span></div>
+                <div class="round">Round: <span id="round">1</span>/5</div>
+                <div class="enemies-left">Enemies: <span id="enemiesLeft">10</span></div>
+            </div>
+        </header>
+        
+        <main class="game-area">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <div class="game-controls">
+                <button id="startBtn">Start Game</button>
+                <button id="pauseBtn" disabled>Pause</button>
+                <button id="restartBtn">Restart</button>
+            </div>
+        </main>
+        
+        <aside class="game-sidebar">
+            <div class="character-select">
+                <h3>Select Your Bionicle</h3>
+                <div class="character-options">
+                    <button class="character-btn active" data-character="tahu">Tahu</button>
+                    <button class="character-btn" data-character="kopaka">Kopaka</button>
+                    <button class="character-btn" data-character="lewa">Lewa</button>
+                    <button class="character-btn" data-character="pohatu">Pohatu</button>
+                    <button class="character-btn" data-character="gali">Gali</button>
+                    <button class="character-btn" data-character="onua">Onua</button>
+                </div>
+            </div>
+            
+            <div class="movement-controls">
+                <h3>Movement Controls</h3>
+                <div class="arrow-container">
+                    <div class="arrow-row">
+                        <button class="arrow-btn" id="upBtn">↑</button>
+                    </div>
+                    <div class="arrow-row">
+                        <button class="arrow-btn" id="leftBtn">←</button>
+                        <button class="arrow-btn" id="downBtn">↓</button>
+                        <button class="arrow-btn" id="rightBtn">→</button>
+                    </div>
+                    <div class="arrow-row">
+                        <button class="arrow-btn attack-btn" id="attackBtn">⚔️</button>
+                    </div>
+                    <div class="arrow-row">
+                        <button class="arrow-btn special-btn" id="specialBtn">✨</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="instructions">
+                <h3>Controls</h3>
+                <ul>
+                    <li><strong>WASD / Arrows</strong> - Move</li>
+                    <li><strong>Space / ⚔️</strong> - Attack</li>
+                    <li><strong>Shift / ✨</strong> - Special Move</li>
+                    <li><strong>Q</strong> - Shield (Kopaka only)</li>
+                    <li><strong>E</strong> - Fire Dash (Tahu only)</li>
+                    <li><strong>R</strong> - Water Wave (Gali only)</li>
+                    <li><strong>F</strong> - Stone Dash (Pohatu only)</li>
+                    <li><strong>T</strong> - Wind Boost (Lewa only)</li>
+                    <li><strong>G</strong> - Earth Tremor (Onua only)</li>
+                    <li><strong>🌍 Shift+G</strong> - Earth Devastation (Onua Ultra)</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "name": "bionicle-arena",
+  "version": "1.4.0",
+  "description": "A web-based action game where you control legendary Bionicle heroes in arena battles",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8000 -o",
+    "dev": "npx http-server . -p 8000 -o --cors",
+    "version:patch": "npm version patch && git add . && git commit -m \"Bump version to $(cat VERSION)\"",
+    "version:minor": "npm version minor && git add . && git commit -m \"Bump version to $(cat VERSION)\"",
+    "version:major": "npm version major && git add . && git commit -m \"Bump version to $(cat VERSION)\"",
+    "build": "echo 'No build process needed for HTML5 game' && exit 0",
+    "test": "echo 'No tests specified' && exit 0"
+  },
+  "keywords": [
+    "bionicle",
+    "game",
+    "html5",
+    "canvas",
+    "javascript",
+    "arena",
+    "action"
+  ],
+  "author": "Loay",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "files": [
+    "index.html",
+    "styles.css",
+    "game.js",
+    "README.md",
+    "CHANGELOG.md",
+    "VERSION"
+  ]
+}
